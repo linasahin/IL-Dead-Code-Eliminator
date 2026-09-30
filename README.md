@@ -41,3 +41,24 @@ Supports a C-like Intermediate Language syntax:
 Make sure you have `flex`, `bison` (or `lex`, `yacc`), and `gcc` installed:
 ```bash
 sudo apt-get install flex bison gcc
+```
+### Build
+Run the provided build script:
+```bash
+chmod +x build.sh run.sh
+./build.sh
+```
+
+### Execution
+Run the optimizer with an input IL file:
+```bash
+./run.sh test.il
+```
+
+## 📁 Repository Structure
+* scanner.l: Lexical analyzer specification.
+* parser.y: Syntax analyzer and DCE core algorithm.
+* build.sh: Automated compilation script.
+* run.sh: Execution wrapper script.
+* test.il: Sample unoptimized IL input.
+* final.il: Expected optimized output demonstration.
